@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admissions Consulting | Patrick Oh</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-left">OP Law School Counseling and LSAT Tutoring</div>
+        <div class="nav-toggle" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <nav class="nav-right" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="tutoring.html">Tutoring</a>
+          <a href="admissions.html">Admissions Consulting</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <h1>Real Results. Personal Guidance. Limited Spots.</h1>
+        <p>
+          I applied to law school during the ultra-competitive 2024–25 cycle—and
+          came out the other side with offers from
+          <b>Harvard, Stanford, Penn, NYU, Duke, Cornell</b>, and several other
+          top law schools. I navigated this process as a
+          <b>KJD (straight from undergrad)</b> and know firsthand how
+          overwhelming, expensive, and high-stakes it can be.
+        </p>
+        <p>
+          That’s why I offer personalized admissions consulting—designed to give
+          you the tools, guidance, and honest feedback you need to craft your
+          strongest possible application without wasting time or money. In fact,
+          I saved over <b>$2,000</b> throughout my own process, and I’ll help
+          you do the same—through smart school selection, strategic application
+          timing, and fee waiver maximization.
+        </p>
+      </section>
+
+      <section class="admissions-section">
+        <h2>What You’ll Get</h2>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            Develop <b>compelling personal and diversity statements</b> with
+            clear, authentic storytelling.
+          </div>
+          <div class="benefit-item">
+            Build a <b>school list</b> that balances reach and fit.
+          </div>
+          <div class="benefit-item">
+            Strategize <b>early decision and scholarship</b> plans.
+          </div>
+          <div class="benefit-item">
+            Refine your <b>resume</b>, school specific essays, and application
+            materials line by line.
+          </div>
+          <div class="benefit-item">
+            Stay on track throughout the entire cycle with
+            <b>realistic timelines and reminders</b>.
+          </div>
+          <div class="benefit-item">
+            Get honest, tailored advice from someone who’s actually been through
+            it successfully.
+          </div>
+        </div>
+        <p class="disclaimer">
+          This is not a cookie-cutter editing service. This is
+          <b>real mentorship</b>, and I’ll only be working with
+          <strong>THREE</strong> students this cycle to give each of you my full
+          attention.
+        </p>
+      </section>
+
+      <section class="admissions-packages">
+        <h2>Consulting Packages</h2>
+
+        <div class="package-card">
+          <h4>Application Package – $2,999</h4>
+          <p>
+            Perfect for students who have already written drafts and need help
+            revising and strengthening their materials.
+          </p>
+          <ul>
+            <li>Personal Statement</li>
+            <li>Diversity Statement (if applicable)</li>
+            <li>Resume</li>
+            <li>School-Specific Essays</li>
+            <li>
+              Strategic advice on school list, early decision, and timeline
+            </li>
+            <li>10 hours of live consultation time</li>
+          </ul>
+        </div>
+
+        <div class="package-card">
+          <h4>Full Cycle Package – $4,199</h4>
+          <p>
+            Ideal for students who want start-to-finish guidance across the
+            entire cycle. Includes everything in the Application Package plus:
+          </p>
+          <ul>
+            <li>Unlimited email support throughout the cycle</li>
+            <li>Unlimited essay reviews & school-specific addenda</li>
+            <li>
+              Ongoing strategy, school list refinement, and decision-making
+              support
+            </li>
+            <li>Pre-submission checks for all applications</li>
+            <li>Weekly consultation sessions</li>
+          </ul>
+        </div>
+
+        <div class="package-card">
+          <h4>Pre-Application Advising – $TBD</h4>
+          <p>
+            Planning support for students looking to build their narrative
+            early—whether you're choosing extracurriculars, prepping your
+            resume, or getting ahead of the curve.
+          </p>
+        </div>
+
+        <div class="package-card">
+          <h4>A La Carte – $250/hour</h4>
+          <p>
+            Just need help with a few pieces? Book hourly consulting for any of
+            the following:
+          </p>
+          <ul>
+            <li>Personal Statement</li>
+            <li>Diversity Statement</li>
+            <li>Resume</li>
+            <li>School-Specific Essays</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta-tutoring">
+        <p><strong>Limited Availability:</strong> Only 3 Students This Cycle</p>
+        <p>
+          To keep things personal and high-quality, I’m only working with
+          <b>THREE applicants</b> this year. If you're serious about maximizing
+          your chances and doing it with someone who's been through the trenches
+          <b>reach out now to reserve your spot</b>.
+        </p>
+      </section>
+
+      <section class="form-section">
+        <form>
+          <h2>Let’s Talk</h2>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your full name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email address"
+          />
+
+          <fieldset class="checkbox-group-vertical">
+            <legend>Which service are you interested in?</legend>
+            <label
+              ><input type="checkbox" name="service" value="application" />
+              Application Package</label
+            >
+            <label
+              ><input type="checkbox" name="service" value="fullcycle" /> Full
+              Cycle Package</label
+            >
+            <label
+              ><input type="checkbox" name="service" value="preapp" />
+              Pre-Application Advising</label
+            >
+            <label
+              ><input type="checkbox" name="service" value="alacarte" /> A La
+              Carte</label
+            >
+            <label
+              ><input type="checkbox" name="service" value="unsure" /> Not sure
+              yet</label
+            >
+          </fieldset>
+
+          <label for="message"
+            >Tell me a little about your goals or where you are in the
+            process:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message here..."
+          ></textarea>
+
+          <button type="submit">Let’s Talk</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <p>&copy; 2025 Patrick Oh. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

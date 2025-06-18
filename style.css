@@ -1,0 +1,672 @@
+/* === GLOBAL STYLING === */
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Roboto", sans-serif;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* === NAVIGATION BAR === */
+.navbar {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.nav-left {
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Inter", serif;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0.5rem;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 24px;
+  background: #333;
+  border-radius: 2px;
+  display: block;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-right a:hover {
+  color: #004aad;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-right.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-right a {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f2f2f2;
+    width: 100%;
+  }
+
+  .nav-right a:hover {
+    color: #004aad;
+  }
+}
+
+/* === SECTION STYLING === */
+.why-work,
+.schedule,
+#tutoring,
+#admissions {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  margin-top: 5rem;
+  box-sizing: border-box;
+}
+
+.why-work {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  margin: 6rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  max-width: 1100px;
+}
+
+#tutoring {
+  background-color: #ffffff;
+}
+
+/* === ADMISSIONS CONSULTING SECTION === */
+#admissions {
+  background-color: #ffffff;
+  padding: 5rem 1rem;
+}
+
+.admissions-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.admissions-section h2 {
+  font-size: 2rem;
+  font-family: "Inter", serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.benefit-item {
+  background: #f4f8ff;
+  border-left: 4px solid #004aad;
+  padding: 1.25rem 1rem 1.25rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.disclaimer {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* === PACKAGES === */
+.admissions-packages {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.admissions-packages h2 {
+  font-size: 1.9rem;
+  font-family: "Inter", serif;
+  font-weight: 600;
+  margin-top: 4rem;
+  margin-bottom: 2.25rem;
+  color: #222;
+}
+
+/* === PACKAGE CARDS === */
+.package-card,
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+  max-width: 800px;
+  text-align: left;
+}
+
+.package-card h4,
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #004aad;
+  font-family: "Inter", serif;
+  font-weight: 600;
+}
+
+.package-card ul,
+.card ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.package-card p,
+.card p {
+  margin: 0.75rem 0 1rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.65;
+}
+
+/* === LIMITED AVAILABILITY NOTICE === */
+.availability-note,
+.cta-tutoring {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  color: #222;
+  font-weight: 500;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.availability-note span,
+.cta-tutoring strong {
+  color: #004aad;
+  font-weight: 700;
+}
+
+/* === FORM ALIGNMENT FOR ADMISSIONS === */
+#admissions form {
+  margin-top: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .admissions-section h2 {
+    font-size: 1.65rem;
+  }
+
+  .benefits-grid {
+    gap: 1rem;
+  }
+
+  .benefit-item {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .package-card {
+    padding: 1.5rem;
+  }
+
+  .package-card h4 {
+    font-size: 1.05rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Inter", serif;
+  color: #222;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 120px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+/* === BIO SECTION === */
+.bio-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.bio-text {
+  flex: 1 1 300px;
+}
+
+.bio-photo img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.button-link {
+  display: inline-block;
+  background: #004aad;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0.5rem 0.5rem 0 0;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.button-link:hover {
+  background: #00337d;
+}
+
+.cta-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.cta-links .button-link {
+  background-color: #004aad;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  transition: background 0.2s ease;
+}
+
+.cta-links .button-link:hover {
+  background-color: #00337d;
+}
+
+/* === RESPONSIVE BIO SECTION === */
+@media (max-width: 768px) {
+  .why-work {
+    margin-top: 1rem;
+  }
+
+  .bio-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .bio-photo {
+    order: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .bio-photo img {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .cta-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-links .button-link {
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+  }
+}
+
+/* === FORMS === */
+form {
+  width: 100%;
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2rem 1.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Inter", serif;
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.checkbox-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkbox-group-vertical label {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.checkbox-group-vertical input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #004aad;
+  cursor: pointer;
+}
+
+button {
+  background: #004aad;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #00337d;
+}
+
+/* === TUTORING PAGE SECTION === */
+.hero-section {
+  max-width: 1000px;
+  margin: 6rem auto 3rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: "Inter", serif;
+}
+
+.hero-section p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tutoring-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  max-width: 1000px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h4 {
+  font-family: "Inter", serif;
+  font-weight: 600;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.cta-tutoring {
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+  margin-top: 2rem;
+}
+
+.cta-tutoring .button-link {
+  background-color: #004aad;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+.cta-tutoring .button-link:hover {
+  background-color: #00337d;
+}
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .cta-tutoring .button-link {
+    width: 100%;
+  }
+}
+
+/* === TUTORING INFO DETAILS SECTION === */
+.tutoring-details {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  font-family: "Roboto", sans-serif;
+}
+
+.tutoring-details h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-family: "Inter", serif;
+  font-weight: 600;
+}
+
+.tutoring-details p,
+.tutoring-details li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.tutoring-details ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tutoring-details strong {
+  font-weight: 600;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #f1f1f1;
+  color: #777;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-links nav a {
+  margin: 0 10px;
+  color: #444;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-links nav a:hover {
+  text-decoration: underline;
+}

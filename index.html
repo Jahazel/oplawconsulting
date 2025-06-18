@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OP Law School Counseling and LSAT Tutoring</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav-left">OP Law School Counseling and LSAT Tutoring</div>
+        <div class="nav-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-right" id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="tutoring.html">Tutoring</a>
+          <a href="admissions.html">Admissions Consulting</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="why-work">
+        <div class="bio-layout">
+          <div class="bio-text">
+            <h2>Why Work With Me?</h2>
+            <p>
+              My name is Patrick Oh. I am a student at
+              <strong>Stanford Law School</strong>, scored a
+              <strong>178</strong> on the LSAT, and am a
+              <strong>former 7Sage tutor</strong>. I was also accepted at
+              Harvard, UPenn, and other T-14 law schools. As a KJD and
+              first-generation law student, I know the difficulties of
+              approaching law school applications and the LSAT alone. My goal is
+              to help students reach their potential whether it be their
+              <strong>dream score or school</strong>. If you’re interested in
+              learning more about my admissions consulting or LSAT tutoring,
+              click the respective tabs.
+            </p>
+            <div class="cta-links">
+              <a class="button-link" href="admissions.html"
+                >Explore Admissions Consulting</a
+              >
+              <a class="button-link" href="tutoring.html"
+                >Explore LSAT Tutoring</a
+              >
+            </div>
+          </div>
+          <div class="bio-photo">
+            <img src="patrick_graduation-7304.JPG" alt="Photo of Patrick Oh" />
+          </div>
+        </div>
+      </section>
+
+      <form>
+        <h2>Schedule a Consultation</h2>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="First Name" required />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Last Name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email Address" required />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          placeholder="Write any questions or info here"
+        ></textarea>
+
+        <fieldset>
+          <legend>Format (select all that apply) *</legend>
+
+          <div class="checkbox-group-vertical">
+            <label>
+              <input type="checkbox" id="freeConsult" />
+              LSAT Tutoring
+            </label>
+            <label>
+              <input type="checkbox" id="groupSession" />
+              Admissions Consulting
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Schedule Now</button>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <p>&copy; 2025 Patrick Oh. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
