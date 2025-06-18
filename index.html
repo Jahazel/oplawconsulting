@@ -57,26 +57,47 @@
             </div>
           </div>
           <div class="bio-photo">
-            <img src="patrick_graduation-7304.JPG" alt="Photo of Patrick Oh" />
+            <img src="patrick_graduation.jpg" alt="Photo of Patrick Oh" />
           </div>
         </div>
       </section>
 
-      <form>
+      <form name="consultation" method="POST" data-netlify="true" netlify>
+        <input type="hidden" name="form-name" value="consultation" />
+
         <h2>Schedule a Consultation</h2>
 
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" placeholder="First Name" required />
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+          required
+        />
 
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" placeholder="Last Name" required />
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last Name"
+          required
+        />
 
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Email Address" required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          required
+        />
 
         <label for="message">Message</label>
         <textarea
           id="message"
+          name="message"
           placeholder="Write any questions or info here"
         ></textarea>
 
@@ -85,11 +106,15 @@
 
           <div class="checkbox-group-vertical">
             <label>
-              <input type="checkbox" id="freeConsult" />
+              <input type="checkbox" name="services" value="LSAT Tutoring" />
               LSAT Tutoring
             </label>
             <label>
-              <input type="checkbox" id="groupSession" />
+              <input
+                type="checkbox"
+                name="services"
+                value="Admissions Consulting"
+              />
               Admissions Consulting
             </label>
           </div>
