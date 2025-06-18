@@ -156,14 +156,18 @@
       </section>
 
       <section class="form-section">
-        <form>
+        <form name="lets-talk" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="lets-talk" />
+
           <h2>Let’s Talk</h2>
+
           <label for="name">Name</label>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Your full name"
+            required
           />
 
           <label for="email">Email</label>
@@ -172,40 +176,53 @@
             id="email"
             name="email"
             placeholder="Your email address"
+            required
           />
 
           <fieldset class="checkbox-group-vertical">
             <legend>Which service are you interested in?</legend>
-            <label
-              ><input type="checkbox" name="service" value="application" />
-              Application Package</label
-            >
-            <label
-              ><input type="checkbox" name="service" value="fullcycle" /> Full
-              Cycle Package</label
-            >
-            <label
-              ><input type="checkbox" name="service" value="preapp" />
-              Pre-Application Advising</label
-            >
-            <label
-              ><input type="checkbox" name="service" value="alacarte" /> A La
-              Carte</label
-            >
-            <label
-              ><input type="checkbox" name="service" value="unsure" /> Not sure
-              yet</label
-            >
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="Application Package"
+              />
+              Application Package
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="Full Cycle Package"
+              />
+              Full Cycle Package
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="service"
+                value="Pre-Application Advising"
+              />
+              Pre-Application Advising
+            </label>
+            <label>
+              <input type="checkbox" name="service" value="A La Carte" />
+              A La Carte
+            </label>
+            <label>
+              <input type="checkbox" name="service" value="Not Sure Yet" />
+              Not sure yet
+            </label>
           </fieldset>
 
-          <label for="message"
-            >Tell me a little about your goals or where you are in the
-            process:</label
-          >
+          <label for="message">
+            Tell me a little about your goals or where you are in the process:
+          </label>
           <textarea
             id="message"
             name="message"
             placeholder="Your message here..."
+            required
           ></textarea>
 
           <button type="submit">Let’s Talk</button>
